@@ -22,14 +22,11 @@ const Navbar = () => {
 
       <div className="flex-between gap-5">
         {/* CLERK user management */}
-        {/* <SignedIn>
-          <UserButton/>
-        </SignedIn> */}
+        <SignedIn>
+          <UserButton afterSignOutUrl="/sign-in" />
+        </SignedIn>
 
-        {/* <SignedOut>
-          <SignInButton/>
-        </SignedOut> */}
-       <MobileNav/>
+        <MobileNav />
       </div>
     </nav>
   );
