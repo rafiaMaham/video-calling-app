@@ -27,7 +27,18 @@ const config = {
           1: "#0E78F9",
         },
         sky: {
-          1: "#c9ddff"
+          1: "#c9ddff",
+          2: "#ecf0ff",
+          3: "#f5fcff"
+        },
+        orange:{
+          1: "#ff742e"
+        },
+        purple: {
+          1: "#830ef9"
+        },
+        yellow:{
+          1: "#f9a90e"
         }
       },
 
