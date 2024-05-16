@@ -3,7 +3,7 @@
 import { useState } from "react";
 import HomeCard from "./HomeCard";
 import { useRouter } from "next/navigation";
-
+import MeetingModal from "./MeetingModal";
 
 const MeetingTypeList = () => {
   const router = useRouter();
@@ -12,6 +12,10 @@ const MeetingTypeList = () => {
     "isScheduleMeeting" | "isJoiningMeeting" | "isInstantMeeting" | undefined
   >();
 
+  const createMeeting = () => {
+    
+  };
+
   return (
     <section>
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -19,7 +23,7 @@ const MeetingTypeList = () => {
           img="/icons/add-meeting.svg"
           title="New Meeting"
           description="Start an instant meeting"
-          handleClick={() => setMeetingState("isJoiningMeeting")}
+          handleClick={() => setMeetingState("isInstantMeeting")}
           className="bg-orange-1"
         />
         <HomeCard
@@ -34,17 +38,26 @@ const MeetingTypeList = () => {
           title="View Recordings"
           description="Checkout your recordings"
           handleClick={() => setMeetingState("isJoiningMeeting")}
+          // handleClick={() => router.push("/recordings")}
           className="bg-purple-1"
         />
         <HomeCard
           img="/icons/join-meeting.svg"
           title="Join Meeting"
           description="via invitation link"
-          // handleClick={() => router.push("/recordings")}
           handleClick={() => setMeetingState("isJoiningMeeting")}
           className="bg-yellow-1"
         />
       </div>
+
+      <MeetingModal
+        isOpen={meetingState === "isInstantMeeting"}
+        onClose={() => setMeetingState(undefined)}
+        title="Start an Instant Meeting"
+        className="text-center"
+        buttonText="Start Meeting"
+        handleClick={createMeeting}
+      />
     </section>
   );
 };
