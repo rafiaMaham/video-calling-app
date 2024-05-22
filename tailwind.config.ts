@@ -22,6 +22,7 @@ const config = {
         dark: {
           1: "#1C1F2E",
           2: "#161925",
+          3: "#161925",
         },
         blue: {
           1: "#0E78F9",
@@ -29,21 +30,21 @@ const config = {
         sky: {
           1: "#c9ddff",
           2: "#ecf0ff",
-          3: "#f5fcff"
+          3: "#f5fcff",
         },
-        orange:{
-          1: "#ff742e"
+        orange: {
+          1: "#ff742e",
         },
         purple: {
-          1: "#830ef9"
+          1: "#830ef9",
         },
-        yellow:{
-          1: "#f9a90e"
-        }
+        yellow: {
+          1: "#f9a90e",
+        },
       },
 
       backgroundImage: {
-        hero: "url('/images/hero-background.png')"
+        hero: "url('/images/hero-background.png')",
       },
 
       keyframes: {
