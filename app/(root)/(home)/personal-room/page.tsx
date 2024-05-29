@@ -71,7 +71,7 @@ const PersonalRoom = () => {
         </Button>
 
         <Button
-          className="bg-dark-3"
+          className="bg-dark-1"
           onClick={() => {
             navigator.clipboard.writeText(meetingLink);
             toast({

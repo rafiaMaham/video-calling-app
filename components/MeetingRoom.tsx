@@ -14,7 +14,6 @@ import {
 import { useRouter, useSearchParams } from "next/navigation";
 import { Users, LayoutList } from "lucide-react";
 import { cn } from "@/lib/utils";
-import router from "next/router";
 
 import {
   DropdownMenu,
@@ -33,6 +32,7 @@ const MeetingRoom = () => {
   const [showParticipants, setShowParticipants] = useState(false);
   const searchParams = useSearchParams();
   const isPersonalRoom = !!searchParams.get("personal");
+  const router = useRouter();
 
   const { useCallCallingState } = useCallStateHooks();
   const callingState = useCallCallingState();
